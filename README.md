@@ -29,6 +29,11 @@ Python, Pandas, NumPy, Scikit-learn (TF-IDF, Logistic Regression, Random Forest)
 | Random Forest       |   93.2%  |
 
 ## Key Findings
-- Random Forest outperformed Logistic Regression overall and was notably better at identifying negative reviews
-- The dataset is heavily imbalanced (~92% positive reviews), which caused Logistic Regression to default toward predicting "positive" almost exclusively
-- This highlights the importance of checking class distribution before relying on accuracy alone as an evaluation metric
+- Random Forest outperformed Logistic Regression overall and was notably better at identifying negative reviews.
+- The dataset is heavily imbalanced (~92% positive reviews), which caused Logistic Regression to default toward predicting "positive" almost exclusively.
+- Logistic Regression got 0% recall on negative reviews (it just predicted "positive" for almost everything), while Random Forest caught some negatives (24% recall) but still struggled.
+- This highlights the importance of checking class distribution before relying on accuracy alone as an evaluation metric.
+
+## Future Improvements
+- Address class imbalance using techniques like class weighting or SMOTE to improve negative review detection
+- Experiment with n-grams or word embeddings (Word2Vec, BERT) for richer text representation
